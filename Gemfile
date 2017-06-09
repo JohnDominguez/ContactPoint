@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Custom gems
+gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'devise'
