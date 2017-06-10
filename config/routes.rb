@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'sold_courses/index'
+
+  get 'cart/index'
+
   get 'home/index'
   get 'users/index'
   devise_for :users
