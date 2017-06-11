@@ -6,12 +6,12 @@
 	margin-bottom: 50px;
 }
 
-footer {
-	margin-top: 100px;
+#edit_form h2 {
+	margin-bottom: 50px;
 }
 
-label.required:after {
-  content:" *";
+footer {
+	margin-top: 100px;
 }
 
 
@@ -21,6 +21,10 @@ label.required:after {
 	}
 
 	#login_form {
+		width: 50%;
+	}
+
+	#edit_form {
 		width: 50%;
 	}
 }

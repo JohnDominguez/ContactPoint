@@ -38,8 +38,9 @@
             <!-- Checking if the user is signed in -->
             <% if !user_signed_in? %>
               <li><a href="/users/sign_up"><span class="glyphicon glyphicon-heart"></span> Registrarse</a></li>
-              <li><a href="/users/sign_in"><span class="glyphicon glyphicon-ok-sign"></span> Iniciar Sesión</a></li>
+              <li><a href="/users/sign_in"><span class="glyphicon glyphicon-globe"></span> Iniciar Sesión</a></li>
             <% else %>
+              <li><a href="/users/edit"><span class="glyphicon glyphicon-user"></span> Editar Cuenta</a></li>
               <li><%= link_to "Cerrar Sesión", destroy_user_session_path, :method => :delete %></li>
             <% end %>
           </ul>
