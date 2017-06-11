@@ -4,9 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ConnectionPoint</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="/assets/stylesheets/custom.css">
   </head>
 
   <body>
@@ -20,7 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">ConnectionPoint</a>
+          <a class="navbar-brand" href="/">ConnectionPoint</a>
         </div>
 
         <!-- Collect the nav links -->
@@ -28,7 +29,6 @@
           <ul class="nav navbar-nav">
             <li><a href="#"><span class="glyphicon glyphicon-book"></span> Cursos</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Acerca</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-sunglasses"></span> Casos de éxito</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-usd"></span> Carrito</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-asterisk"></span> Compra de puntos</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-folder-open"></span> Catálogo</a></li>
@@ -37,7 +37,7 @@
           <ul class="nav navbar-nav navbar-right">
             <!-- Checking if the user is signed in -->
             <% if !user_signed_in? %>
-              <li><a href="#"><span class="glyphicon glyphicon-heart"></span> Registrarse</a></li>
+              <li><a href="/users/sign_up"><span class="glyphicon glyphicon-heart"></span> Registrarse</a></li>
               <li><a href="#"><span class="glyphicon glyphicon-ok-sign"></span> Iniciar Sesión</a></li>
             <% else %>
               <li><%= link_to "Cerrar Sesión", destroy_user_session_path, :method => :delete %></li>
@@ -49,10 +49,26 @@
     <!-- /Navbar -->
 
     <%= yield %>
-
     <!-- Devise Alerts -->
     <p class="notice"><%= notice %></p> 
     <p class="alert"><%= alert %></p>
+
+
+    <!-- Footer -->
+    <footer class="container">
+      <div class="row">
+        <ul class="nav nav-pills col-md-6">
+          <li role="presentation"><a href="#">Home</a></li>
+          <li role="presentation"><a href="#">Profile</a></li>
+          <li role="presentation"><a href="#">Messages</a></li>
+        </ul>
+        <p class="text-right col-md-6">
+          somtehing
+        </p>
+      </div>
+    </footer>
+
+    <!-- /.Footer -->
 
   </body>
 </html>

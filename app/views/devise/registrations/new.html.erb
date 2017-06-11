@@ -1,56 +1,51 @@
-<h2>Sign up</h2>
+<div id="form-container" class="container">
+  <h2 class="text-center">Registro</h2>
+  <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <div class="row"> <!-- row -->
+        <div class="field col-md-6">
+          <%= f.text_field :name, autofocus: true, label: "Nombre"%>
+        </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
-  </div>
+        <div class="field col-md-6">
+          <%= f.text_field :last_name, label: "Apellido" %>
+        </div>
+    </div> <!-- /.row -->
+    
+    <div class="row"> <!-- row -->
+      <div class="field col-md-4">    
+        <%= f.select :document_type, ['CC', 'TI', 'CE', 'NIT'], label: "Tipo de Documento" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :birthday %><br />
-    <%= f.date_field :birthday %>
-  </div>
+      <div class="field col-md-4">
+        <%= f.text_field :document_number, label: "Número del Documento" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </div>
+      <div class="field col-md-4">
+        <%= f.date_field :birthday, label: "Fecha de Nacimiento" %>
+      </div>
+    </div>  <!-- /.row -->
 
-  <div class="field">
-    <%= f.label :document_type %><br />
-    <%= f.select :document_type, ['CC', 'TI', 'CE', 'NIT'] %>
-  </div>
+    <div class="field">
+      <%= f.email_field :email, label: "Correo Electrónico"%>
+    </div>
 
-  <div class="field">
-    <%= f.label :document_number %><br />
-    <%= f.text_field :document_number %>
-  </div>
-  
+    <div class="field">
+      <% if @minimum_password_length %>
+      <em>(Mínimo <%= @minimum_password_length %> carácteres)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", label: "Contraseña" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "off", label: "Repita la Contraseña" %>
+    </div>
+ 
+    <div class="actions">
+      <%= f.submit "¡Enviar!", class: "btn btn-success btn-lg btn-block" %>
+    </div>
+  <% end %>
+</div>
 
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email%>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
