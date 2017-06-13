@@ -1,0 +1,11 @@
+Vamos a crear los más sorprendentes cursos
+
+
+
+<%= form_for @course, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+	<p>NOMBRE<%= f.text_field :name %></p>
+	<p>DESCRIPCIÓN<%= f.text_area :description, size: "60x12" %></p>
+	<p>CATEGORÍA<%= f.text_field :category %></p>
+	<p>PRECIO<%= f.text_field :price %></p>
+	<p><%= f.submit "Crear curso" %></p>
+<% end %>

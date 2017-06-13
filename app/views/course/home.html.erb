@@ -1,0 +1,18 @@
+<h1>Los más impresionantes cursos</h1>
+
+<%= link_to('Logout', destroy_user_session_path, method: :delete) %>  
+
+<% @courses.each do |c| %>
+
+	<p><%= link_to c.name, "/course/#{c.id}" %></p>
+	<p><%= c.description %></p>
+	<p><%= c.price %></p>
+	<p><%= c.category %></p>
+	<%= link_to "Añadir al carrito", "/cart/new"%>
+
+<% end %>
+
+
+
+
+
