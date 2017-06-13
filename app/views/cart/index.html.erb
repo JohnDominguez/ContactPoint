@@ -1,0 +1,9 @@
+<h1>Carrito index</h1>
+
+<% @carts.each do |c| %>
+
+    <p><%= c.course_id %></p>
+<% end %>
+<%= link_to "Regresar a cursos", "/courses" %>
+
+

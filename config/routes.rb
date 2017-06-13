@@ -1,10 +1,29 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  get 'users/index'
+root to: "home#index"
+#Courses routes
+  get 'courses', to: "course#home"
+  get 'course/:id', to:"course#show"
+  get 'courses/new', to: "course#new", as: 'new_course'
+  
+  post '/courses', to: 'course#create'
+#####
+#USuarios routes through devise gem
   devise_for :users
+  get 'users/index'
+#####
+#Cart routes
+#get 'cart'
+  resources :cart
+####
+  get 'sold_courses/index'
+
+
+  get 'home/index'
+
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root to: "home#index"
+  
 
 
 

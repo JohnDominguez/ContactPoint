@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170609162522) do
+ActiveRecord::Schema.define(version: 20170610110418) do
+
+  create_table "carts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.float "quantity", limit: 24
+    t.bigint "user_id"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_carts_on_course_id"
+    t.index ["user_id"], name: "index_carts_on_user_id"
+  end
 
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -19,6 +29,19 @@ ActiveRecord::Schema.define(version: 20170609162522) do
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sold_courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.float "quantity", limit: 24
+    t.float "price", limit: 24
+    t.bigint "user_id"
+    t.bigint "course_id"
+    t.bigint "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_sold_courses_on_cart_id"
+    t.index ["course_id"], name: "index_sold_courses_on_course_id"
+    t.index ["user_id"], name: "index_sold_courses_on_user_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -44,4 +67,9 @@ ActiveRecord::Schema.define(version: 20170609162522) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "carts", "courses"
+  add_foreign_key "carts", "users"
+  add_foreign_key "sold_courses", "carts"
+  add_foreign_key "sold_courses", "courses"
+  add_foreign_key "sold_courses", "users"
 end
