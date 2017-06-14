@@ -12,8 +12,18 @@
 
 footer {
 	margin-top: 100px;
+
 }
 
+#carousel-example-generic img {
+	width: 100%;
+}
+
+.card {
+	background-color: #d6d6d6;
+	padding: 50px;
+	margin: 20px 80px;
+}
 
 @media (min-width: 768px) {
 	#register_form {
@@ -28,6 +38,4 @@ footer {
 		width: 50%;
 	}
 }
-
-
 

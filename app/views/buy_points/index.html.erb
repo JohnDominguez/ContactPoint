@@ -1,0 +1,44 @@
+
+<div class=" container">
+	
+  <div class="jumbotron">
+	  <h1 class="text-center" style="margin-bottom: 40px">Compra de puntos</h1>
+	  <p class="text-center">
+			Los <strong>puntos</strong> son la <strong>moneda virtual </strong>( <span class="glyphicon glyphicon-asterisk"></span> )  de esta plataforma. En este espacio
+			puedes comprar puntos entre un rango predeterminado.
+			Gracias a estos puedes canjear todo tipo de cursos los cuales su precio varía dependiendo de su categoría.
+			Lo mismo aplica para canjear cualquier tipo de productos.
+			Eso si, Siempre y cuando poseas los puntos suficientes.
+		</p>
+	  <p class="text-center" style="margin-top: 40px"><a class="btn btn-primary btn-success btn-lg" data-toggle="modal" href="edit.html.erb#buy_points_modal" role="button">Compra Puntos</a></p>
+  </div>
+ 
+	<!-- Modal -->
+	<div class="modal fade" id="buy_points_modal" tabindex="-1" role="dialog" aria-labelledby="BuyPointsModal">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title text-center" id="myModalLabel">¡Compra puntos!</h4>
+	      </div>
+	      <div class="modal-body">
+					<%= form_for @user, url: {action: "create"} do |f| %>
+						<%=f.collection_select(:points, Point.all, :point, :name) %>
+				</div>
+	      <div class="modal-footer">
+	        <%= f.submit class: "btn btn-success btn-lg btn-block" %>
+
+	      <% end %>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	
+	<!-- /.Modal -->
+
+
+	
+
+	
+</div>
