@@ -4,6 +4,7 @@ root to: "home#index"
   get 'courses', to: "course#home"
   get 'course/:id', to:"course#show"
   get 'courses/new', to: "course#new", as: 'new_course'
+  get 'cart/showdos/:otherid', to: "cart#showdos"
   
   post '/courses', to: 'course#create'
 #####
@@ -14,6 +15,7 @@ root to: "home#index"
 #Cart routes
 #get 'cart'
   resources :cart
+  #get 'cart/:id', to: "cart#show"
 ####
   get 'sold_courses/index'
 

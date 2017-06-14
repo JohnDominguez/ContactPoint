@@ -3,6 +3,8 @@ class CourseController < ApplicationController
 	#before_action :authenticate_user!, :except => [:show, :index]
   def home
   	@courses = Course.all
+    
+
   end
 
   def new

@@ -3,16 +3,15 @@
 <%= link_to('Logout', destroy_user_session_path, method: :delete) %>  
 
 <% @courses.each do |c| %>
-
+	<%form_tag({controller: "course", action: "home"}, method: "get")%>
 	<p><%= link_to c.name, "/course/#{c.id}" %></p>
 	<p><%= c.description %></p>
 	<p><%= c.price %></p>
 	<p><%= c.category %></p>
-	<%= link_to "Añadir al carrito", "/cart/new"%>
+	<%=link_to "Agregar curso al carrito", controller: 'cart', action: 'show', id: c.id%>
+	
+	
+
 
 <% end %>
-
-
-
-
 

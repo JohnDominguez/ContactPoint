@@ -1,0 +1,9 @@
+<h1>Carrito show</h1>
+<p><%=@coursename.each do |f|%></p>
+<%=f.name%>
+<%end%>
+
+<%@cartstodos.each do |f|%>
+<p><%=f.id%></p>
+<%end%>
+<%= link_to "Regresar a cursos", "/courses" %>

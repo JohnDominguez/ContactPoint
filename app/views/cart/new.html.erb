@@ -2,6 +2,7 @@
 <%= form_for @cart, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
 	<p>Cantidad<%=f.text_field :quantity %></p>
 	<p><%=f.collection_select(:course_id, Course.all, :id, :name) %></p>
+	<p><%=@course_id %> Id course</p>
 	<p><%= f.submit "Añadir al carrito" %></p>
 <% end %>
 <%= link_to "Volver a cursos", "/courses"%>
