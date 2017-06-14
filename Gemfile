@@ -39,6 +39,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'bootstrap_form'
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 
 
 
