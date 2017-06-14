@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  like: false
+  courses: one
+  users: one
+  message: 
+
+two:
+  like: false
+  courses: two
+  users: two
+  message: 

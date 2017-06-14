@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :suppliers
+  resources :products
 root to: "home#index"
 #Courses routes
   get 'courses', to: "course#home"

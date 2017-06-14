@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170610110418) do
+ActiveRecord::Schema.define(version: 20170614024610) do
 
   create_table "carts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.float "quantity", limit: 24
@@ -22,11 +22,62 @@ ActiveRecord::Schema.define(version: 20170610110418) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
+  create_table "course_ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.boolean "like"
+    t.bigint "courses_id"
+    t.bigint "users_id"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["courses_id"], name: "index_course_ratings_on_courses_id"
+    t.index ["users_id"], name: "index_course_ratings_on_users_id"
+  end
+
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.text "description"
     t.float "price", limit: 24
     t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_carts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "users_id"
+    t.bigint "products_id"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["products_id"], name: "index_product_carts_on_products_id"
+    t.index ["users_id"], name: "index_product_carts_on_users_id"
+  end
+
+  create_table "product_ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.boolean "like"
+    t.bigint "products_id"
+    t.bigint "users_id"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["products_id"], name: "index_product_ratings_on_products_id"
+    t.index ["users_id"], name: "index_product_ratings_on_users_id"
+  end
+
+  create_table "product_stocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "suppliers_id"
+    t.bigint "products_id"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["products_id"], name: "index_product_stocks_on_products_id"
+    t.index ["suppliers_id"], name: "index_product_stocks_on_suppliers_id"
+  end
+
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "description"
+    t.string "category"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,6 +93,26 @@ ActiveRecord::Schema.define(version: 20170610110418) do
     t.index ["cart_id"], name: "index_sold_courses_on_cart_id"
     t.index ["course_id"], name: "index_sold_courses_on_course_id"
     t.index ["user_id"], name: "index_sold_courses_on_user_id"
+  end
+
+  create_table "sold_products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "users_id"
+    t.bigint "products_id"
+    t.integer "quantity"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["products_id"], name: "index_sold_products_on_products_id"
+    t.index ["users_id"], name: "index_sold_products_on_users_id"
+  end
+
+  create_table "suppliers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "telephone"
+    t.string "email"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -69,7 +140,15 @@ ActiveRecord::Schema.define(version: 20170610110418) do
 
   add_foreign_key "carts", "courses"
   add_foreign_key "carts", "users"
+  add_foreign_key "course_ratings", "courses", column: "courses_id"
+  add_foreign_key "course_ratings", "users", column: "users_id"
+  add_foreign_key "product_ratings", "products", column: "products_id"
+  add_foreign_key "product_ratings", "users", column: "users_id"
+  add_foreign_key "product_stocks", "products", column: "products_id"
+  add_foreign_key "product_stocks", "suppliers", column: "suppliers_id"
   add_foreign_key "sold_courses", "carts"
   add_foreign_key "sold_courses", "courses"
   add_foreign_key "sold_courses", "users"
+  add_foreign_key "sold_products", "products", column: "products_id"
+  add_foreign_key "sold_products", "users", column: "users_id"
 end
