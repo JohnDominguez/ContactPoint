@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ConnectionPoint</title>
+    <link href="/assets/favicon.png" rel="shortcut icon" type="image/x-icon" />
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,7 +14,7 @@
 
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-inverse" style="margin: 0">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -30,8 +31,7 @@
           <ul class="nav navbar-nav">
             <li><a href="#"><span class="glyphicon glyphicon-book"></span> Cursos</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-usd"></span> Carrito</a></li>
-            <li><a href="/buy_points/index"><span class="glyphicon glyphicon-asterisk"></span> Compra de puntos</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-folder-open"></span> Catálogo</a></li>
+            <li><a href="/buy_points/buy"><span class="glyphicon glyphicon-asterisk"></span> Compra de puntos</a></li>
           </ul>
         <!-- Right nav links -->
           <ul class="nav navbar-nav navbar-right">
@@ -49,6 +49,7 @@
     </nav>
     <!-- /Navbar -->
 
+    <div id="content">
     <%= yield %>
     <!-- Devise Alerts -->
     
@@ -56,23 +57,17 @@
     <p class="alert text-center text-danger" style="font-size: 1.3em"><%= alert %></p>
 
     <!-- /Devise Alerts -->
+    </div>
 
 
 
     <!-- Footer -->
-    <footer class="container">
-      <div class="row">
-        <ul class="nav nav-pills col-md-6">
-          <li role="presentation"><a href="#">Home</a></li>
-          <li role="presentation"><a href="#">Profile</a></li>
-          <li role="presentation"><a href="#">Messages</a></li>
-        </ul>
-        <p class="text-right col-md-6">
-          somtehing
-        </p>
-      </div>
-    </footer>
+    <div id="footer" class="container-fluid">
 
+      <div class="row">
+        
+      </div>
+    </div>
     <!-- /.Footer -->
 
   </body>
