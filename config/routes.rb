@@ -2,13 +2,16 @@ Rails.application.routes.draw do
   resources :suppliers
   resources :products
 root to: "home#index"
-#Courses routes
+# Courses routes
+# delete 'course/:id', to: "course#destruir"
   get 'courses', to: "course#home"
+  post 'courses', to: 'course#create'
   get 'course/:id', to:"course#show"
+  get 'course/:id/edit', to: "course#edit"
+  patch 'course/:id/edit', to: "course#update"
   get 'courses/new', to: "course#new", as: 'new_course'
-  get 'cart/showdos/:otherid', to: "cart#showdos"
   
-  post '/courses', to: 'course#create'
+  
 #####
 #USuarios routes through devise gem
   devise_for :users
