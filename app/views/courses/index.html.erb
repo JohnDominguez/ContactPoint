@@ -2,6 +2,9 @@
 
 <h1 style="margin-top:60px">Courses</h1>
 
+<%if current_user.admin?%>
+<p>Hola Soy Admin</p>
+<%end%>
 <table>
   <thead>
     <tr>
