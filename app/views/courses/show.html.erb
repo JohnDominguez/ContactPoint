@@ -1,8 +1,24 @@
+<!-- Title (Change color depending of the category) -->
+<% case @course.category %>
+  <% when 'Matemáticas' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #ff5e5e; margin-top: 40px;"><%= @course.name %></h2>
+  <% when 'Historia' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #20ffa9; margin-top: 40px;"><%= @course.name %></h2>
+  <% when 'Programación' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #282828; margin-top: 40px;"><%= @course.name %></h2>
+  <% when 'Ciencias' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #ffa959; margin-top: 40px;"><%= @course.name %></h2>
+  <% when 'Artes' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #4221ff; margin-top: 40px;"><%= @course.name %></h2>
+  <% when 'Otros' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #9e59ff; margin-top: 40px;"><%= @course.name %></h2>
+<% end %>
+<!-- /Title -->
+
+
 <div class="container">
 
-	<!-- Title -->
-	<h1 class="col-md-12 upper-title text-center"><%= @course.name %></h1>
-	<!-- /Title -->
+
 	
 	<!-- Intro-Video -->
 	<iframe class="embed-responsive-item center-block" style="margin-bottom: 50px" width="660" height="415" src="https://www.youtube.com/embed/di60mvq5ImA" frameborder="0" allowfullscreen></iframe>
@@ -38,10 +54,10 @@
 	<!-- Edit and Back (Edit only for admins) -->
 	<div style="width: 50%; margin: 100px auto 0">
 	 
-	  <% if current_user && current_user.admin? %>	
+	  <% #if current_user && current_user.admin? %>	
 	  	<%= link_to 'Editar Curso', edit_course_path(@course), class: "btn btn-lg btn-warning center-block text-center" %>
-	  	<%= link_to 'Eliminar Curso', course, method: :delete, data: { confirm: '¿Estás Seguro?' }, class: "btn btn-lg btn-danger center-block text-center" %>   
-		<% end %>
+	  	<%= link_to 'Eliminar Curso', @course, method: :delete, data: { confirm: '¿Estás Seguro?' }, class: "btn btn-lg btn-danger center-block text-center" %>   
+		<% #end %>
 		
 		<%= link_to 'Back', courses_path, class: "btn btn-lg btn-default center-block text-center"%>
 	</div>
