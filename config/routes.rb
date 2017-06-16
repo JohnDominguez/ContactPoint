@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :carts
   devise_for :admins
   resources :courses
 	resources :buy_points
