@@ -1,32 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="upper-title">Courses</h1>
+<h1 class="upper-title text-center">Courses</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container text-center">
+  <div class="row">
     <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.name %></td>
-        <td><%= course.description %></td>
-        <td><%= course.price %></td>
-        <td><%= course.category %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div id="course" class="col-md-5">
+      
+
+      <h2><%= course.name %></h2>
+      <p style="margin-bottom: 30px;">  <%= course.category %>  </p>
+      <img style="max-height: 200px; max-height: 250px; margin: auto;" class="img-responsive" src="/assets/rubbish.jpg" alt="Img-test">
+      
+      <% if course.description.length < 135  %>
+
+        <p style="margin-top: 30px; font-size: 1.2em"><%= course.description %></p>
+      
+      <% else %>
+        <p style="margin-top: 30px; font-size: 1.2em"><%= course.description[0..135] %>...[<span class="text-warning">Ver Más Información</span>]></p>
+        
+      <% end %>
+
+      <span class="text-primary" style="display: block; font-size: 1.2em">
+        Price: <%= course.price %> 
+      </span>
+      <br>
+      <%= link_to 'Más Información', course, class: "btn btn-primary btn-lg"%>
+
+      
+    </div>
     <% end %>
-  </tbody>
-</table>
+  </div>  
+</div>
 
 <br>
 

@@ -10,7 +10,7 @@
 	
 	<!-- Description -->
 	<h2 class="upper-title text-center">Detalles</h2>
-	<p class="text-center" style="margin-bottom: 50px">
+	<p class="text-center" style="margin-bottom: 50px; font-size: 1.3em">
 	  <%= @course.description %>
 	</p>
 	<!-- /Description -->
@@ -37,8 +37,11 @@
 
 	<!-- Edit and Back (Edit only for admins) -->
 	<div style="width: 50%; margin: 100px auto 0">
-	  
-	  <%= link_to 'Edit', edit_course_path(@course), class: "btn btn-lg btn-warning center-block text-center" %>   
+	 
+	  <% if current_user && current_user.admin? %>	
+	  	<%= link_to 'Editar Curso', edit_course_path(@course), class: "btn btn-lg btn-warning center-block text-center" %>
+	  	<%= link_to 'Eliminar Curso', course, method: :delete, data: { confirm: '¿Estás Seguro?' }, class: "btn btn-lg btn-danger center-block text-center" %>   
+		<% end %>
 		
 		<%= link_to 'Back', courses_path, class: "btn btn-lg btn-default center-block text-center"%>
 	</div>
