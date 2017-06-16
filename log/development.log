@@ -1,0 +1,1216 @@
+Started GET "/" for 127.0.0.1 at 2017-06-15 16:59:50 -0500
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 462ms (Views: 444.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK(3466450051621440555, 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateCourses (20170615220409)
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE `courses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `price` int, `category` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK(3466450051621440555)[0m
+Started GET "/" for 127.0.0.1 at 2017-06-15 17:04:26 -0500
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+vendor/bundle/gems/activerecord-5.1.1/lib/active_record/migration.rb:576:in `check_pending!'
+vendor/bundle/gems/activerecord-5.1.1/lib/active_record/migration.rb:553:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(3466450051621440555, 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateCourses (20170615220409)
+  [1m[35m (291.2ms)[0m  [1m[35mCREATE TABLE `courses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `price` int, `category` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170615220409')[0m
+  [1m[35m (81.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK(3466450051621440555)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `courses`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'courses'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/" for 127.0.0.1 at 2017-06-15 17:07:23 -0500
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6073ms (Views: 6059.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 17:49:09 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 103ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 17:54:12 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4050ms (Views: 4048.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 17:54:25 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+Completed 404 Not Found in 13ms (ActiveRecord: 3.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Course with 'id'=1):
+  
+app/controllers/courses_controller.rb:67:in `set_course'
+Started GET "/courses/" for 127.0.0.1 at 2017-06-15 17:54:30 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 105ms (Views: 102.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 17:54:56 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 104ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 17:59:14 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Started GET "/" for 127.0.0.1 at 2017-06-15 17:59:17 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4257ms (Views: 4255.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1114ms (Views: 1112.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 17:59:19 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Started GET "/" for 127.0.0.1 at 2017-06-15 17:59:19 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 285ms (Views: 283.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 275ms (Views: 273.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cursos" for 127.0.0.1 at 2017-06-15 17:59:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cursos"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/cursos" for 127.0.0.1 at 2017-06-15 17:59:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cursos"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 17:59:38 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 87ms (Views: 84.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 17:59:40 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 100ms (Views: 97.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 18:00:06 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 3035ms (Views: 3033.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2017-06-15 18:01:22 -0500
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (38.8ms) [cache miss]
+  Rendered courses/new.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 132ms (Views: 113.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2017-06-15 18:04:02 -0500
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4bj7W2ufTpuJbdQfYos2ue2WuoRP8pddgB3RM+01VNWtO+/ohloOt5MQ5ZPm369ps79SEIcsOto1ms6pqa/upg==", "course"=>{"name"=>"Los Griegos", "description"=>"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar u", "price"=>"5200", "category"=>"historia"}, "commit"=>"Create Course"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `description`, `price`, `category`, `created_at`, `updated_at`) VALUES ('Los Griegos', 'Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar u', 5200, 'historia', '2017-06-15 23:04:02', '2017-06-15 23:04:02')[0m
+  [1m[35m (126.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/courses/1
+Completed 302 Found in 133ms (ActiveRecord: 126.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:04:02 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 72ms (Views: 67.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:06:56 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 124ms (Views: 120.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:07:03 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 88ms (Views: 84.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:07:13 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:08:02 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3213ms (Views: 3210.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:09:09 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 75ms (Views: 71.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:09:48 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 71ms (Views: 67.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:12:03 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:12:58 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 116ms (Views: 113.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:13:11 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 79ms (Views: 75.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:13:30 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 76ms (Views: 73.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:14:13 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:14:22 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 83ms (Views: 79.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:14:29 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 98ms (Views: 95.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:14:51 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 78ms (Views: 74.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:15:06 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 75ms (Views: 71.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:15:22 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 85ms (Views: 81.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:15:37 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 76ms (Views: 72.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:15:51 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 92ms (Views: 89.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:16:13 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 84ms (Views: 79.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:16:32 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 76ms (Views: 73.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:16:41 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:16:48 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 96ms (Views: 92.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:17:11 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 95ms (Views: 90.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:17:30 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 78ms (Views: 74.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:17:47 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 82ms (Views: 78.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:18:06 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 80ms (Views: 76.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:18:17 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 96ms (Views: 92.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:18:26 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 89ms (Views: 85.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:18:43 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 90ms (Views: 86.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:19:33 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:19:54 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 86ms (Views: 82.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:20:38 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3344ms (Views: 3339.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:22:34 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:23:27 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 71ms (Views: 68.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:26:20 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 119ms (Views: 115.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:26:34 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 95ms (Views: 91.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:27:27 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 106ms (Views: 102.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:28:39 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 81ms (Views: 76.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 18:28:50 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 87ms (Views: 84.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:28:59 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 99ms (Views: 95.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:30:05 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 100ms (Views: 96.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:30:49 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 4174ms (Views: 4171.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:31:40 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:31:51 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 78ms (Views: 73.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:32:35 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 90ms (Views: 87.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:33:34 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:34:19 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 102ms (Views: 97.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:35:31 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 88ms (Views: 84.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:35:47 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 91ms (Views: 87.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:35:58 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 82ms (Views: 78.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:37:24 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 96ms (Views: 92.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:38:06 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 83ms (Views: 79.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:41:32 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 92ms (Views: 88.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:41:43 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 82ms (Views: 78.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:42:34 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 81ms (Views: 77.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:43:46 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 99ms (Views: 94.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:44:10 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 76ms (Views: 72.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:45:29 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 87ms (Views: 84.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:46:02 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 87ms (Views: 84.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:46:29 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 86ms (Views: 82.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:47:37 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 94ms (Views: 90.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:47:53 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:48:23 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 91ms (Views: 87.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:49:10 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 98ms (Views: 95.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:49:39 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 89ms (Views: 84.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:50:14 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 96ms (Views: 93.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:50:23 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 88ms (Views: 84.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:50:31 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 82ms (Views: 79.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:51:08 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 89ms (Views: 84.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:51:22 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 91ms (Views: 86.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:51:35 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 98ms (Views: 94.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 18:51:37 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 78ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 18:51:41 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 89ms (Views: 86.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:51:44 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 113ms (Views: 108.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1/edit" for 127.0.0.1 at 2017-06-15 18:52:32 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (10.0ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 92ms (Views: 88.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 18:52:55 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Started GET "/courses/assets/ni%C3%B1o_avion.png" for 127.0.0.1 at 2017-06-15 18:52:55 -0500
+  
+Started GET "/courses/assets/responsive.png" for 127.0.0.1 at 2017-06-15 18:52:55 -0500
+ActionController::RoutingError (No route matches [GET] "/courses/assets/ni%C3%B1o_avion.png"):
+  
+Started GET "/courses/assets/arrow.jpg" for 127.0.0.1 at 2017-06-15 18:52:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/courses/assets/responsive.png"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/courses/assets/arrow.jpg"):
+Started GET "/courses/assets/business_men.png" for 127.0.0.1 at 2017-06-15 18:52:55 -0500
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/courses/assets/business_men.png"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Completed 200 OK in 209ms (Views: 207.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/assets/cycle_lane.jpg" for 127.0.0.1 at 2017-06-15 18:52:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/courses/assets/cycle_lane.jpg"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/courses/assets/office.png" for 127.0.0.1 at 2017-06-15 18:52:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/courses/assets/office.png"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 18:52:58 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 110ms (Views: 106.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 18:52:59 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 89ms (Views: 86.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 18:53:00 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 93ms (Views: 90.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 18:53:02 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 94ms (Views: 91.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:53:04 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 111ms (Views: 107.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:56:31 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 102ms (Views: 98.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 18:56:37 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 91ms (Views: 88.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2017-06-15 18:56:45 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 107ms (Views: 103.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 18:56:50 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-15 18:56:58 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 92ms (Views: 89.9ms | ActiveRecord: 0.6ms)
+
+

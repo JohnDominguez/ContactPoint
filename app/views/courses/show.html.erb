@@ -1,0 +1,47 @@
+<div class="container">
+
+	<!-- Title -->
+	<h1 class="col-md-12 upper-title text-center"><%= @course.name %></h1>
+	<!-- /Title -->
+	
+	<!-- Intro-Video -->
+	<iframe class="embed-responsive-item center-block" style="margin-bottom: 50px" width="660" height="415" src="https://www.youtube.com/embed/di60mvq5ImA" frameborder="0" allowfullscreen></iframe>
+	<!-- /Intro-Video -->
+	
+	<!-- Description -->
+	<h2 class="upper-title text-center">Detalles</h2>
+	<p class="text-center" style="margin-bottom: 50px">
+	  <%= @course.description %>
+	</p>
+	<!-- /Description -->
+	
+	<!-- More Info -->
+	<button style="width: 70%" type="button" class="btn btn-lg btn-primary center-block text-center" data-toggle="collapse" href="#interested" aria-expanded="false" aria-controls="interested">¿Interesado?</button>
+
+	<div class="collapse" id="interested">
+	  <div class="well">
+			<h3 class="text-center">
+			  <span class="text-primary">Price:
+			  <%= @course.price %> </span>
+			</h3>
+			<button style="margin-top: 50px auto 0" type="button" class="btn btn-lg btn-success center-block text-center">¡Comprar!</button>
+	  </div>
+	</div>
+	<!-- /More Info -->
+
+<!-- 	<p>
+	  <strong>Category:</strong>
+	  <%= @course.category %>
+	</p> -->
+	
+
+	<!-- Edit and Back (Edit only for admins) -->
+	<div style="width: 50%; margin: 100px auto 0">
+	  
+	  <%= link_to 'Edit', edit_course_path(@course), class: "btn btn-lg btn-warning center-block text-center" %>   
+		
+		<%= link_to 'Back', courses_path, class: "btn btn-lg btn-default center-block text-center"%>
+	</div>
+	<p id="notice"><%= notice %></p>
+
+</div>
