@@ -31,6 +31,14 @@
     <%= form.select :category, ['Matemáticas', 'Programación', 'Historia', 'Ciencias', 'Artes', 'Otros'] ,id: :course_category %>
   </div>
 
+  <div class="field">
+    <%= form.file_field :video_intro %>
+  </div>
+
+  
+
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

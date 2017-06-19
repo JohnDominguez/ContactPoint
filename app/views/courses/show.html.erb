@@ -40,7 +40,10 @@
 			  <span class="text-primary">Price:
 			  <%= @course.price %> </span>
 			</h3>
-			<button style="margin-top: 50px auto 0" type="button" class="btn btn-lg btn-success center-block text-center">¡Comprar!</button>
+			
+			<%= button_to "Cancel Return", { :controller => "carts", :action => "create"}, params: { course_id: @course.id } %>
+			
+			<button style="margin-top: 50px auto 0" type="button" class="btn btn-lg btn-success center-block text-center">¡Añadir al Carrito!</button>
 	  </div>
 	</div>
 	<!-- /More Info -->

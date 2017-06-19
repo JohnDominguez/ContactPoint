@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :carts
   resources :courses
 	resources :buy_points
   get 'home/index'
