@@ -41,9 +41,8 @@
 			  <%= @course.price %> </span>
 			</h3>
 			
-			<%= button_to "Cancel Return", { :controller => "carts", :action => "create"}, params: { course_id: @course.id } %>
+			<%= button_to "Añadir al Carrito", { :controller => "carts", :action => "create"}, params: { course_id: @course.id }, class: "btn btn-lg btn-success center-block" %>
 			
-			<button style="margin-top: 50px auto 0" type="button" class="btn btn-lg btn-success center-block text-center">¡Añadir al Carrito!</button>
 	  </div>
 	</div>
 	<!-- /More Info -->

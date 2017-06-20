@@ -1,11 +1,10 @@
 <!-- Jumbotron  -->
 
 <div class="jumbotron ">
-  <h1 style="margin: 30px 0">¡Compra Puntos!</h1>
+  <h1 style="margin: 125px 0 30px 0">¡Compra Puntos!</h1>
   <p style="margin: 30px 0">
   Aca pudes comprar puntos, algo así como la moneda virtual de este sitio.
   Con puntos pudes comprar cursos o cualquier otro tipo de servicio
-
   </p>
   <a style="margin: 30px 0" class="btn btn-primary btn-block btn-lg" href="#buy_modal" role="button" data-toggle="modal">Comprar</a>
 </div>
@@ -21,11 +20,41 @@
         <h4 class="modal-title text-center">Comprar Puntos</h4>
       </div>
       <div class="modal-body">
- 				
+ 				<%= bootstrap_form_for(@user, :url => url_for(:controller => 'buy_points', :action => 'update')) do |u| %>
+          
+          <div  style="display: block; text-align: center; margin-bottom: 5px">
+            <input id="1" name="points" type="radio" value="1000">
+            <label for="1">1000 pts</label>
+          </div>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success btn-block btn-lg">Confirmar</button>
+          <div  style="display: block; text-align: center; margin-bottom: 5px">
+            <input id="2" name="points" type="radio" value="2000">
+            <label for="2">2000 pts</label>
+          </div>
+
+          <div  style="display: block; text-align: center; margin-bottom: 5px">
+            <input id="3" name="points" type="radio" value="5000">
+            <label for="3">5000 pts</label>
+          </div>
+          
+          <div  style="display: block; text-align: center; margin-bottom: 5px">
+            <input id="4" name="points" type="radio" value="10000">
+            <label for="4">10000 pts</label>
+          </div>
+          
+          <div  style="display: block; text-align: center; margin-bottom: 5px">
+            <input id="5" name="points" type="radio" value="20000">
+            <label for="5">20000 pts</label>
+          </div>
+
+          <div  style="display: block; text-align: center; margin-bottom: 15px">
+            <input id="6" name="points" type="radio" value="50000">
+            <label for="6">50000 pts</label>
+          </div>
+
+          <%= button_to "Confirmar", { :controller => "buy_points", :action => "update"}, class: "btn btn-lg btn-success center-block" %>
+       <% end %>
+
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

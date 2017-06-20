@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href="/courses"><span class="glyphicon glyphicon-book"></span> Cursos</a></li>
-            <li><a href="/carts"><span class="glyphicon glyphicon-usd"></span> Carrito</a></li>
+            <li><a href="/carts"><span class="glyphicon glyphicon-shopping-cart"></span> Carrito </a></li>
             <li><a href="/buy_points/buy"><span class="glyphicon glyphicon-asterisk"></span> Compra de puntos</a></li>
           </ul>
         <!-- Right nav links -->
@@ -40,6 +40,7 @@
               <li><a href="/users/sign_up"><span class="glyphicon glyphicon-heart"></span> Registrarse</a></li>
               <li><a href="/users/sign_in"><span class="glyphicon glyphicon-globe"></span> Iniciar Sesión</a></li>
             <% else %>
+              <li><a href=""><%= current_user.points %>  <span class="glyphicon glyphicon-asterisk"></span></a></li>
               <li><a href="/users/edit"><span class="glyphicon glyphicon-user"></span> Editar Cuenta</a></li>
               <li><%= link_to "Cerrar Sesión", destroy_user_session_path, :method => :delete %></li>
             <% end %>

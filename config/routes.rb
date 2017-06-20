@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :purchases
   resources :carts
   resources :courses
 	resources :buy_points
+	post 'buy_points/buy', to: "buy_points#update"
   get 'home/index'
   get 'users/index'
 

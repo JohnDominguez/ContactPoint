@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170619224324) do
+ActiveRecord::Schema.define(version: 20170620022509) do
 
   create_table "carts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "user_id"
@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(version: 20170619224324) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "VideoIntro"
+  end
+
+  create_table "purchases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "course_id"
+    t.integer "quantity"
+    t.integer "price"
+    t.bigint "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_purchases_on_cart_id"
+    t.index ["course_id"], name: "index_purchases_on_course_id"
+    t.index ["user_id"], name: "index_purchases_on_user_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -58,4 +71,7 @@ ActiveRecord::Schema.define(version: 20170619224324) do
 
   add_foreign_key "carts", "courses"
   add_foreign_key "carts", "users"
+  add_foreign_key "purchases", "carts"
+  add_foreign_key "purchases", "courses"
+  add_foreign_key "purchases", "users"
 end

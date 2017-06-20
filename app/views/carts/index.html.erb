@@ -1,31 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Carts</h1>
+<h1 class="upper-title text-center" style="background-color: #5CB85C;color: #fff; margin-top: 30px; padding: 40px "><span class="glyphicon glyphicon-shopping-cart"></span> Carrito</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Course</th>
-      <th>Quantity</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @carts.each do |cart| %>
+<div class="container">
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= cart.user %></td>
-        <td><%= cart.course %></td>
-        <td><%= cart.quantity %></td>
-        <td><%= link_to 'Show', cart %></td>
-        <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
-        <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- <th>User</th> -->
+        <th>Curso</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @carts.each do |cart| %>
+        <tr>
+          <!-- <td><%= cart.user %></td> -->
+          <td><%= cart.course.name %></td>
+          <td><%= cart.quantity %></td>
+          <td class="text-info"><%= cart.course.price %></td>
+          <td><%= link_to 'Eliminar', cart, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>  
+        </tr>
+      <% end %>
+        <tr>
+          <th>Total</th>
+          <td><%= @quantity %></td>
+          <td><%= @sum %></td>
+          <td><%= link_to '¡Comprar!', "#", class: "btn btn-success text-center" %></td>
+        </tr>
+    </tbody>
+  </table>
 
-<%= link_to 'New Cart', new_cart_path %>
+  <br>
+
+  <%#= link_to 'New Cart', new_cart_path %>
+</div>
