@@ -10,7 +10,23 @@
     <% @courses.each do |course| %> <!-- Iterating Over Each Course -->
     
     <div id="course" class="col-md-5">  <!-- Course Container -->
-      <%= render 'category_color', course: course %> <!-- Course Header -->
+      <!-- Course Header -->
+      <% case course.category %>
+        <% when 'Matemáticas' %> 
+          <h2 class="upper-title text-center" style="background-color: #ff5e5e; margin-bottom: 40px;"><%= course.name %></h2>
+        <% when 'Historia' %> 
+          <h2 class="upper-title text-center" style="background-color: #20ffa9; margin-bottom: 40px;"><%= course.name %></h2>
+        <% when 'Programación' %> 
+          <h2 class="upper-title text-center" style="background-color: #282828; margin-bottom: 40px;"><%= course.name %></h2>
+        <% when 'Ciencias' %> 
+          <h2 class="upper-title text-center" style="background-color: #ffa959; margin-bottom: 40px;"><%= course.name %></h2>
+        <% when 'Artes' %> 
+          <h2 class="upper-title text-center" style="background-color: #4221ff; margin-bottom: 40px;"><%= course.name %></h2>
+        <% when 'Otros' %> 
+          <h2 class="upper-title text-center" style="background-color: #9e59ff; margin-bottom: 40px;"><%= course.name %></h2>
+      <% end %>
+
+      <!-- /Course Header -->
       
       <img style="max-height: 200px; max-height: 250px; margin: auto;" class="img-responsive" src="/assets/rubbish.jpg" alt="Img-test"> <!-- Course Image -->
       

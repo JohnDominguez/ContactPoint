@@ -39,7 +39,6 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'bootstrap_form'
-gem 'carrierwave'
 
 
 
