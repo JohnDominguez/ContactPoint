@@ -1,0 +1,28 @@
+// Place all the styles related to the Courses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#course {
+	margin: 40px;
+	height: 630px;
+	border-radius: 30px;
+	padding: 0;
+	box-shadow: 10px 10px 7px #888;
+}
+
+#course h2 {
+	background-color: #4286f4;
+	color: #fff; 
+	margin: 0;
+	padding: 30px;
+	border-top-right-radius: 27px ;
+	border-top-left-radius: 27px;
+}
+
+.course-title {
+	color: #fff;
+	padding: 30px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius:10px;
+}

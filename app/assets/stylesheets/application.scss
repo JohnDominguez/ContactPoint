@@ -1,0 +1,137 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require rails_bootstrap_forms
+
+
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/********** General ***********/
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Asap', sans-serif;
+}
+
+@media (min-width: 768px) {
+	#content {
+		height: 100vh;
+	}
+}
+
+@media (max-width: 800px) {
+	#content {
+		height: 100%;
+	}
+}
+
+.upper-title {
+	margin: 80px 0 50px 0; 
+}
+
+/********** Navbar Style ***********/
+
+
+/********** Form Style ***********/
+#register_form h2 {
+	margin-bottom: 50px;
+}
+
+#login_form h2 {
+	margin-bottom: 50px;
+}
+
+#edit_form h2 {
+	margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+	#register_form {
+		width: 50%;
+	}
+
+	#login_form {
+		width: 50%;
+	}
+
+	#edit_form {
+		width: 50%;
+	}
+}
+
+/********** Footer Style ***********/
+/*#footer {
+	color: #fff;
+	margin-top: 10px;
+	height: 100px;
+	background-color: #222222 ;
+}*/
+
+
+
+
+/********** Carousel Style ***********/
+
+#carousel-example-generic img {
+	width: 100%;
+	margin-top: 50px;
+}
+
+.carousel-caption {
+	padding: 1px;
+	background-color:  rgba(0, 0, 0, 0.3);
+	width: 100vh;
+	border-radius: 20px;
+	font-size: 1.2em;
+}
+
+@media (max-width: 992px) {
+	.carousel-caption {
+		font-size: 1em;
+	}
+}
+
+@media (max-width: 768px) {
+	.carousel-caption {
+		font-size: 0.9em;
+	}
+}
+
+@media (max-width: 630px) {
+	.carousel-caption {
+		visibility: hidden;
+	}
+}
+
+
+
+/********** Index Info Style ***********/
+.card {
+	padding: 50px;
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+
+.card h3 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+

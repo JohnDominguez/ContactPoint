@@ -1,0 +1,14 @@
+<% case @course.category %>
+  <% when 'Matemáticas' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #ff5e5e; margin-top: 40px;"><%= @course.name %></h2>
+  <% when 'Historia' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #20ffa9; margin-top: 40px;"><%= @course.name %></h2>
+  <% when 'Programación' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #282828; margin-top: 40px;"><%= @course.name %></h2>
+  <% when 'Ciencias' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #ffa959; margin-top: 40px;"><%= @course.name %></h2>
+  <% when 'Artes' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #4221ff; margin-top: 40px;"><%= @course.name %></h2>
+  <% when 'Otros' %> 
+    <h2 class="upper-title text-center course-title" style="background-color: #9e59ff; margin-top: 40px;"><%= @course.name %></h2>
+<% end %>

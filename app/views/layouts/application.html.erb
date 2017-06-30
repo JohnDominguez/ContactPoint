@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ConnectionPoint</title>
+    <link href="/assets/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Asap:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">ConnectionPoint</a>
+        </div>
+
+        <!-- Collect the nav links -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/courses"><span class="glyphicon glyphicon-book"></span> Cursos</a></li>
+            <li><a href="/carts"><span class="glyphicon glyphicon-shopping-cart"></span> Carrito </a></li>
+            <li><a href="/buy_points/buy"><span class="glyphicon glyphicon-asterisk"></span> Compra de puntos</a></li>
+          </ul>
+        <!-- Right nav links -->
+          <ul class="nav navbar-nav navbar-right">
+            <!-- Checking if the user is signed in -->
+            <% if !user_signed_in? %>
+              <li><a href="/users/sign_up"><span class="glyphicon glyphicon-heart"></span> Registrarse</a></li>
+              <li><a href="/users/sign_in"><span class="glyphicon glyphicon-globe"></span> Iniciar Sesión</a></li>
+            <% else %>
+              <li><a href=""><%= current_user.points %>  <span class="glyphicon glyphicon-asterisk"></span></a></li>
+              <li><a href="/users/edit"><span class="glyphicon glyphicon-user"></span> Editar Cuenta</a></li>
+              <li><%= link_to "Cerrar Sesión", destroy_user_session_path, :method => :delete %></li>
+            <% end %>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- /Navbar -->
+
+    <div id="content">
+      <%= yield %>
+      <!-- Devise Alerts -->
+      
+      <p class="notice text-center text-success" style="font-size: 1.3em"><%= notice %></p> 
+      <p class="alert text-center text-danger" style="font-size: 1.3em"><%= alert %></p>
+
+      <!-- /Devise Alerts -->
+    </div>
+
+
+
+    <!-- Footer -->
+<!--     <div id="footer" class="container-fluid">
+
+      <div class="row">
+        
+      </div>
+    </div> -->
+    <!-- /.Footer -->
+
+  </body>
+</html>
