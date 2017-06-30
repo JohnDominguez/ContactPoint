@@ -1,45 +1,41 @@
-<%= form_with(model: course, local: true) do |form| %>
-  <% if course.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
 
-      <ul>
-      <% course.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="container">
+  <%= bootstrap_form_for(course) do |form| %>
+    <% if course.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+        <ul>
+        <% course.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.text_field :name, id: :course_name, label: "Nombre del Curso" %>
+    </div>
+
+    <div class="field">
+      <%= form.text_area :description, id: :course_description, label: "Descripción" %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :price, id: :course_price, label: "Precio" %>
+    </div>
+
+    <div class="field">
+      <%= form.select :category, ['Matemáticas', 'Programación', 'Historia', 'Ciencias', 'Artes', 'Otros'] ,id: :course_category, label: "Categoría" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit class: "btn btn-lg btn-warning"%>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :course_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :course_description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, id: :course_price %>
-  </div>
-
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.select :category, ['Matemáticas', 'Programación', 'Historia', 'Ciencias', 'Artes', 'Otros'] ,id: :course_category %>
-  </div>
-
-  <div class="field">
-    <%= form.file_field :video_intro %>
-  </div>
-
-  
+</div>
 
 
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<!--  -->
+

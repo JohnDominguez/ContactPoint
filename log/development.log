@@ -25532,3 +25532,804 @@ Processing by CoursesController#index as HTML
 Completed 200 OK in 106ms (Views: 102.5ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-30 11:56:52 -0500
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 812ms (Views: 797.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/buy_points/buy" for 127.0.0.1 at 2017-06-30 11:56:55 -0500
+Processing by BuyPointsController#show as HTML
+  Parameters: {"id"=>"buy"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering buy_points/show.html.erb within layouts/application
+  Rendered buy_points/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 145ms (Views: 130.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/buy_points/assets/responsive.png" for 127.0.0.1 at 2017-06-30 11:56:56 -0500
+  
+Started GET "/buy_points/assets/ni%C3%B1o_avion.png" for 127.0.0.1 at 2017-06-30 11:56:56 -0500
+ActionController::RoutingError (No route matches [GET] "/buy_points/assets/responsive.png"):
+Started GET "/buy_points/assets/cycle_lane.jpg" for 127.0.0.1 at 2017-06-30 11:56:56 -0500
+Started GET "/buy_points/assets/arrow.jpg" for 127.0.0.1 at 2017-06-30 11:56:56 -0500
+Started GET "/buy_points/assets/office.png" for 127.0.0.1 at 2017-06-30 11:56:56 -0500
+  
+  
+  
+  
+  
+ActionController::RoutingError (No route matches [GET] "/buy_points/assets/ni%C3%B1o_avion.png"):
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/buy_points/assets/cycle_lane.jpg"):
+ActionController::RoutingError (No route matches [GET] "/buy_points/assets/arrow.jpg"):
+ActionController::RoutingError (No route matches [GET] "/buy_points/assets/office.png"):
+  
+  
+  
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/buy_points/assets/business_men.png" for 127.0.0.1 at 2017-06-30 11:56:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/buy_points/assets/business_men.png"):
+  
+Started GET "/carts" for 127.0.0.1 at 2017-06-30 11:56:57 -0500
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Processing by CartsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 19 LIMIT 1[0m
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 19 LIMIT 1[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered carts/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 159ms (Views: 90.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-30 11:56:58 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (15.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 113ms (Views: 109.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-30 12:02:32 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (22.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 527ms (Views: 507.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 14:46:40 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 421ms (Views: 409.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-06-30 14:46:47 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 225ms (Views: 157.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/assets/ni%C3%B1o_avion.png" for 127.0.0.1 at 2017-06-30 14:46:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/ni%C3%B1o_avion.png"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/assets/responsive.png" for 127.0.0.1 at 2017-06-30 14:46:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/responsive.png"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/assets/office.png" for 127.0.0.1 at 2017-06-30 14:46:47 -0500
+  
+Started GET "/users/assets/cycle_lane.jpg" for 127.0.0.1 at 2017-06-30 14:46:47 -0500
+Started GET "/users/assets/arrow.jpg" for 127.0.0.1 at 2017-06-30 14:46:47 -0500
+ActionController::RoutingError (No route matches [GET] "/users/assets/office.png"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/arrow.jpg"):
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/cycle_lane.jpg"):
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/assets/business_men.png" for 127.0.0.1 at 2017-06-30 14:46:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/business_men.png"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-06-30 14:46:48 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6OFGBer8R1g0mkCrFY0pQrKQX17KxdWlHe1YYD5g1z/ShC7S6/L8C7DA6goUf7DmmaYCd3lWPQ8MB4kzFi7u3A==", "user"=>{"email"=>"aalex@alex.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'aalex@alex.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-06-30 19:46:49', `last_sign_in_at` = '2017-06-30 16:11:10', `sign_in_count` = 5, `updated_at` = '2017-06-30 19:46:49' WHERE `users`.`id` = 2[0m
+  [1m[35m (37.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 244ms (ActiveRecord: 38.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 14:46:49 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-30 14:46:53 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (20.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 102ms (Views: 92.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/courses/21" for 127.0.0.1 at 2017-06-30 14:46:55 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 87ms (Views: 79.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:46:58 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (10.2ms)
+  Rendered courses/edit.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for #<Hash:0x007f08e094a670>):
+    1: <%= bootstrap_form_for(model: course, local: true) do |form| %>
+    2:   <% if course.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+  
+app/views/courses/_form.html.erb:1:in `_app_views_courses__form_html_erb__3051051954475534044_69838048887440'
+app/views/courses/edit.html.erb:3:in `_app_views_courses_edit_html_erb___3512383663561975815_69838081792680'
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:48:20 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (429.7ms)
+  Rendered courses/edit.html.erb within layouts/application (431.8ms)
+Completed 500 Internal Server Error in 438ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x007f08f0395760>:0x007f08ec2ae530>):
+    51: 
+    52: <div id="edit_form" class="container">
+    53:   <h2 class="text-center" style="margin-top: 100px;">Editar Cuenta</h2>
+    54:   <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    55:     <%= devise_error_messages! %>
+    56: 
+    57:     <div class="row"> <!-- row -->
+  
+app/views/courses/_form.html.erb:54:in `_app_views_courses__form_html_erb__3051051954475534044_69838148793680'
+app/views/courses/edit.html.erb:3:in `_app_views_courses_edit_html_erb___3512383663561975815_69838149351300'
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-06-30 14:48:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:28:in `block in call'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `catch'
+vendor/bundle/gems/web-console-3.5.1/lib/web_console/middleware.rb:18:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.1/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.1/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.1/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.1/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/configuration.rb:224:in `call'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:602:in `handle_request'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:435:in `process_client'
+vendor/bundle/gems/puma-3.9.1/lib/puma/server.rb:299:in `block in run'
+vendor/bundle/gems/puma-3.9.1/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:48:54 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (10.5ms)
+  Rendered courses/edit.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for #<Hash:0x000000039cb6e0>):
+    1: <%= bootstrap_form_for(model: course, local: true) do |form| %>
+    2:   <% if course.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+  
+app/views/courses/_form.html.erb:1:in `_app_views_courses__form_html_erb__3051051954475534044_29807460'
+app/views/courses/edit.html.erb:3:in `_app_views_courses_edit_html_erb___3512383663561975815_29422540'
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:49:04 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (9.6ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 128ms (Views: 123.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:50:50 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (2.2ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (388.3ms)
+  Rendered courses/edit.html.erb within layouts/application (389.8ms)
+Completed 500 Internal Server Error in 397ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource' for #<#<Class:0x007f08f0395760>:0x007f08ec116358>):
+    50: <!--  -->
+    51: <div id="edit_form" class="container">
+    52:   <h2 class="text-center" style="margin-top: 100px;">Editar Cuenta</h2>
+    53:   <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    54:     <%= devise_error_messages! %>
+    55: 
+    56:     <div class="row"> <!-- row -->
+  
+app/views/courses/_form.html.erb:53:in `_app_views_courses__form_html_erb__3051051954475534044_69838150059400'
+app/views/courses/edit.html.erb:3:in `_app_views_courses_edit_html_erb___3512383663561975815_69838148515480'
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:51:04 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (7.8ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (9.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 88ms (Views: 83.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:54:19 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (5.5ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 82ms (Views: 77.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:54:38 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (4.2ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 78ms (Views: 73.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:56:40 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (4.3ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 75ms (Views: 71.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:56:50 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (5.4ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 85ms (Views: 81.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/courses/21" for 127.0.0.1 at 2017-06-30 14:57:39 -0500
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 113ms (Views: 109.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-30 14:57:43 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 91ms (Views: 87.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:58:29 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (5.7ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 111ms (Views: 107.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:58:39 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (5.6ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 121ms (Views: 116.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:58:44 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (5.5ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 102ms (Views: 97.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:59:31 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (5.1ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 100ms (Views: 95.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/courses/21/edit" for 127.0.0.1 at 2017-06-30 14:59:48 -0500
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (5.6ms) [cache miss]
+  Rendered courses/edit.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 120ms (Views: 116.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2017-06-30 14:59:51 -0500
+Processing by CartsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 19 LIMIT 1[0m
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 19 LIMIT 1[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered carts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 131ms (Views: 75.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/buy_points/buy" for 127.0.0.1 at 2017-06-30 14:59:52 -0500
+Processing by BuyPointsController#show as HTML
+  Parameters: {"id"=>"buy"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering buy_points/show.html.erb within layouts/application
+  Rendered buy_points/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 90ms (Views: 82.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/carts" for 127.0.0.1 at 2017-06-30 14:59:53 -0500
+Processing by CartsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT `carts`.* FROM `carts`[0m
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 19 LIMIT 1[0m
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 21 LIMIT 1[0m
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 19 LIMIT 1[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered carts/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 104ms (Views: 85.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-30 14:59:53 -0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 84ms (Views: 79.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2017-06-30 14:59:56 -0500
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (7.1ms) [cache miss]
+  Rendered courses/new.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 84ms (Views: 80.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2017-06-30 15:00:45 -0500
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (5.1ms) [cache miss]
+  Rendered courses/new.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 86ms (Views: 83.1ms | ActiveRecord: 0.6ms)
+
+
