@@ -28,7 +28,8 @@
           <th>Total</th>
           <td><%= @quantity %></td>
           <td><%= @sum %></td>
-          <td><%= button_to "Comprar", {:controller => "carts", :action => "destroy_cart"}, method: :delete, class: "btn btn-success text-center", params: { total: @sum } %> </td>
+          
+          <td><%= button_to "Comprar", {:controller => "purchases", :action => "create"}, class: "btn btn-success text-center" %> </td>
         </tr>
     </tbody>
 

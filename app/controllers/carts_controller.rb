@@ -76,22 +76,35 @@ class CartsController < ApplicationController
   end
 
   def destroy_cart
-    
+    @carts = Cart.all
     @user = User.find(current_user.id)
     @total = params[:total].to_i
     @user_points = current_user.points
-    @carts = Cart.all
     
-    if @user_points >= @total
-      @user.update_attribute(:points, @user_points - @total)
-      
+    # if @user_points >= @total
+      ###########################
       @carts.each do |cart|
-        cart.destroy
-      end
-      redirect_to "/success"
-    else
-      redirect_to "/buy_points/buy", notice: "No tienes los puntos suficientes"
-    end
+        @purchase = Purchase.new
+        @purchase.user_id = current_user.id
+        @purchase.course_id = cart.course_id
+        @purchase.quantity = 1
+        @purchase.price = 300
+        @purchase.save
+       end   
+      ###########################
+      # @user.update_attribute(:points, @user_points - @total)
+      
+    #   @carts.each do |cart|
+    #     cart.destroy
+    #   end
+    #   redirect_to "/success"
+    # else
+    #   redirect_to "/buy_points/buy", notice: "Lo siento, tus puntos no son suficientes para realizar la compra. :'("
+    # end
+
+
+
+
   end
 
   private
