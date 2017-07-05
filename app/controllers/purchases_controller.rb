@@ -29,11 +29,27 @@ class PurchasesController < ApplicationController
     @carts.each do |cart|
       @purchase = Purchase.new
       @purchase.user_id = current_user.id
+      nuevo = @purchase.cart_id.to_s.dup.to_i
       @purchase.course_id = cart.course_id
-      @purchase.quantity = 1
-      @purchase.price = 200
-      @purchase.cart_id = cart.id
+      nuevo = cart.id
       @purchase.save
+    end
+
+    @carts = Cart.all
+    @user = User.find(current_user.id)
+    @total = params[:total].to_i
+    @user_points = current_user.points
+    
+    if @user_points >= @total
+
+      @user.update_attribute(:points, @user_points - @total)
+      
+      @carts.each do |cart|
+        cart.destroy
+      end
+      redirect_to "/success"
+    else
+      redirect_to "/buy_points/buy", notice: "Lo siento, tus puntos no son suficientes para realizar la compra. :'("
     end
   end
 
