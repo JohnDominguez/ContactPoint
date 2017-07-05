@@ -1,36 +1,45 @@
-<p id="notice"><%= notice %></p>
-
 <h1 class="upper-title text-center" style="background-color: #5CB85C;color: #fff; margin-top: 30px; padding: 40px "><span class="glyphicon glyphicon-shopping-cart"></span> Carrito</h1>
 
 <div class="container">
   <table class="table">
-    <thead>
-      <tr>
-        <!-- <th>User</th> -->
-        <th>Curso</th>
-        <th>Cantidad</th>
-        <th>Precio</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+    <% if @quantity > 0 %>
 
-    <tbody>
-      <% @carts.each do |cart| %>
+      <thead>
         <tr>
-          <!-- <td><%= cart.user %></td> -->
-          <td><%= cart.course.name %></td>
-          <td><%= cart.quantity %></td>
-          <td class="text-info"><%= cart.course.price %></td>
-          <td><%= link_to 'Eliminar', cart, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>  
+          <!-- <th>User</th> -->
+          <th>Curso</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th colspan="3"></th>
         </tr>
-      <% end %>
+      </thead>
+
+      <tbody>
+        <% @carts.each do |cart| %>
+          <tr>
+            <!-- <td><%= cart.user %></td> -->
+            <td><%= cart.course.name %></td>
+            <td><%= cart.quantity %></td>
+            <td class="text-info"><%= cart.course.price %></td>
+            <td><%= link_to 'Eliminar', cart, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>  
+          </tr>
+        <% end %>
         <tr>
           <th>Total</th>
           <td><%= @quantity %></td>
           <td><%= @sum %></td>
-          <td><%= link_to '¡Comprar!', "#", class: "btn btn-success text-center" %></td>
+          
+          <td><%= button_to "Comprar", {:controller => "purchases", :action => "create"}, class: "btn btn-success text-center" %> </td>
         </tr>
     </tbody>
+
+    <% else %>
+      
+    <h3 style="margin-top: 25px" class="text-center text-muted"> No hay cursos en el carrito </h3>
+    
+    <% end %>
+        
+
   </table>
 
   <br>

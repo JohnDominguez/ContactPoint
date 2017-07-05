@@ -50,7 +50,9 @@
     
     <% end %> <!-- /Iterating Over Each Course -->
   </div>  <!-- Each Course -->
-  <%= link_to 'New Course', new_course_path, class: "btn btn-success btn-lg btn-block" %>
+  <% if current_user && current_user.admin? %>
+    <%= link_to 'Agregar Curso', new_course_path, class: "btn btn-success btn-lg btn-block" %>
+  <% end %>
 </div> <!-- /Main Course Container -->
 
 <br>

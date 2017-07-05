@@ -24,17 +24,21 @@ class PurchasesController < ApplicationController
   # POST /purchases
   # POST /purchases.json
   def create
-    @purchase = Purchase.new(purchase_params)
-
-    respond_to do |format|
-      if @purchase.save
-        format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
-        format.json { render :show, status: :created, location: @purchase }
-      else
-        format.html { render :new }
-        format.json { render json: @purchase.errors, status: :unprocessable_entity }
-      end
+   @carts = Cart.where(user_id: current_user.id)
+    
+    @carts.each do |cart|
+      @purchase = Purchase.new
+      @purchase.user_id = current_user.id
+      @purchase.course_id = cart.course_id
+      @purchase.quantity = 1
+      @purchase.price = 200
+      @purchase.cart_id = cart.id
+      @purchase.save
     end
+  end
+
+  def purchase
+    
   end
 
   # PATCH/PUT /purchases/1
@@ -69,6 +73,6 @@ class PurchasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def purchase_params
-      params.require(:purchase).permit(:user_id, :course_id, :quantity, :price, :cart_id)
+      # => params.require(:purchase).permit(:user_id, :course_id, :quantity, :price, :cart_id)
     end
 end

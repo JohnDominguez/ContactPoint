@@ -38,13 +38,13 @@ class CartsController < ApplicationController
 
     respond_to do |format|
       if @cart.save
-        format.html { redirect_to "/carts", notice: 'Cart was successfully created.' }
+        format.html { redirect_to "/carts", notice: 'Agregado al carrito' }
         format.json { render :show, status: :created, location: @cart }
       else
         format.html { render :new }
         format.json { render json: @cart.errors, status: :unprocessable_entity }
       end
-    end
+    end   
   end
 
   # PATCH/PUT /carts/1
@@ -69,6 +69,42 @@ class CartsController < ApplicationController
       format.html { redirect_to carts_url, notice: 'Cart was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def success
+
+  end
+
+  def destroy_cart
+    @carts = Cart.all
+    @user = User.find(current_user.id)
+    @total = params[:total].to_i
+    @user_points = current_user.points
+    
+    # if @user_points >= @total
+      ###########################
+      @carts.each do |cart|
+        @purchase = Purchase.new
+        @purchase.user_id = current_user.id
+        @purchase.course_id = cart.course_id
+        @purchase.quantity = 1
+        @purchase.price = 300
+        @purchase.save
+       end   
+      ###########################
+      # @user.update_attribute(:points, @user_points - @total)
+      
+    #   @carts.each do |cart|
+    #     cart.destroy
+    #   end
+    #   redirect_to "/success"
+    # else
+    #   redirect_to "/buy_points/buy", notice: "Lo siento, tus puntos no son suficientes para realizar la compra. :'("
+    # end
+
+
+
+
   end
 
   private

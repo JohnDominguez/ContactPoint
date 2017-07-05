@@ -41,7 +41,7 @@
 			  <%= @course.price %> </span>
 			</h3>
 			
-			<%= button_to "Añadir al Carrito", { :controller => "carts", :action => "create"}, params: { course_id: @course.id }, class: "btn btn-lg btn-success center-block" %>
+			<%= button_to "Añadir al Carrito", { :controller => "carts", :action => "create"}, params: { course_id: @course.id}, class: "btn btn-lg btn-success center-block" %>
 			
 	  </div>
 	</div>
@@ -56,13 +56,13 @@
 	<!-- Edit and Back (Edit only for admins) -->
 	<div style="width: 50%; margin: 100px auto 0">
 	 
-	  <% #if current_user && current_user.admin? %>	
+	  <% if current_user && current_user.admin? %>	
 	  	<%= link_to 'Editar Curso', edit_course_path(@course), class: "btn btn-lg btn-warning center-block text-center" %>
 	  	<%= link_to 'Eliminar Curso', @course, method: :delete, data: { confirm: '¿Estás Seguro?' }, class: "btn btn-lg btn-danger center-block text-center" %>   
-		<% #end %>
+		<% end %>
 		
 		<%= link_to 'Back', courses_path, class: "btn btn-lg btn-default center-block text-center"%>
 	</div>
-	<p id="notice"><%= notice %></p>
+	
 
 </div>

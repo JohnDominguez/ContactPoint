@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 	post 'buy_points/buy', to: "buy_points#update"
   get 'home/index'
   get 'users/index'
+  get '/success', to: "carts#success" 
+  delete 'carts', to: "carts#destroy_cart"
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

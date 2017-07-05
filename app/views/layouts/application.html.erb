@@ -40,7 +40,7 @@
               <li><a href="/users/sign_up"><span class="glyphicon glyphicon-heart"></span> Registrarse</a></li>
               <li><a href="/users/sign_in"><span class="glyphicon glyphicon-globe"></span> Iniciar Sesión</a></li>
             <% else %>
-              <li><a href=""><%= current_user.points %>  <span class="glyphicon glyphicon-asterisk"></span></a></li>
+              <li><a href=""><%= current_user.points %>  <strong>puntos</strong></a></li>
               <li><a href="/users/edit"><span class="glyphicon glyphicon-user"></span> Editar Cuenta</a></li>
               <li><%= link_to "Cerrar Sesión", destroy_user_session_path, :method => :delete %></li>
             <% end %>
@@ -51,24 +51,24 @@
     <!-- /Navbar -->
 
     <div id="content">
-      <%= yield %>
-      <!-- Devise Alerts -->
       
+      <!-- Devise Alerts -->
+<!--       
       <p class="notice text-center text-success" style="font-size: 1.3em"><%= notice %></p> 
-      <p class="alert text-center text-danger" style="font-size: 1.3em"><%= alert %></p>
+      <p class="alert text-center text-danger" style="font-size: 1.3em"><%= alert %></p>  -->
 
       <!-- /Devise Alerts -->
+
+      <%= yield %>
     </div>
 
 
 
-    <!-- Footer -->
-<!--     <div id="footer" class="container-fluid">
 
-      <div class="row">
-        
-      </div>
-    </div> -->
+ <!--    <div id="footer" class="container-fluid">
+
+    </div>  -->
+
     <!-- /.Footer -->
 
   </body>
