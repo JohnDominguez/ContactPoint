@@ -1,14 +1,12 @@
 
-<div class="container">
+<div class="container" id="course_form">
   <%= bootstrap_form_for(course) do |form| %>
     <% if course.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
 
         <ul>
-        <% course.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+
         </ul>
       </div>
     <% end %>
@@ -25,17 +23,12 @@
       <%= form.number_field :price, id: :course_price, label: "Precio" %>
     </div>
 
-    <div class="field">
+    <div class="field" style="margin-bottom: 50px;">
       <%= form.select :category, ['Matemáticas', 'Programación', 'Historia', 'Ciencias', 'Artes', 'Otros'] ,id: :course_category, label: "Categoría" %>
     </div>
 
     <div class="actions">
-      <%= form.submit class: "btn btn-lg btn-warning"%>
+      <%= form.submit class: "btn btn-lg btn-primary"%>
     </div>
   <% end %>
 </div>
-
-
-
-<!--  -->
-

@@ -31,13 +31,15 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 768px) {
 	#content {
-		height: 100vh;
+		height: 100%;
+
 	}
 }
 
 @media (max-width: 800px) {
 	#content {
 		height: 100%;
+
 	}
 }
 
@@ -61,6 +63,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 50px;
 }
 
+#course_form h2 {
+	margin-bottom: 50px;
+}
+
 @media (min-width: 768px) {
 	#register_form {
 		width: 50%;
@@ -73,16 +79,22 @@ h1, h2, h3, h4, h5, h6 {
 	#edit_form {
 		width: 50%;
 	}
+
+	#course_form h2 {
+		width: 50%;
+	}
 }
 
 /********** Footer Style ***********/
 /*#footer {
 	color: #fff;
 	margin-top: 10px;
-	height: 100px;
+	height: 50px;
 	background-color: #222222 ;
-}*/
-
+	position: absolute;
+	bottom: 0;
+}
+*/
 
 
 
@@ -132,6 +144,3 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	margin-bottom: 20px;
 }
-
-
-
